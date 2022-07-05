@@ -1,0 +1,135 @@
+.header-logo__title, .header-logo__description {
+  text-shadow: 0 0 5px #000000, 0 0 10px #000000, 0 0 20px #000000;
+}
+
+.navbar {
+  min-height: 50px;
+  padding: 0;
+  --bs-navbar-nav-link-padding-x: 15px;
+}
+
+.nav-item {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+.nav-link {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 15px;
+}
+.nav-link:focus, .nav-link:hover {
+  color: var(--bs-nav-link-hover-color);
+  background-color: #165690;
+  border-radius: 4px;
+}
+.nav-link.active {
+  color: var(--bs-nav-link-hover-color);
+  background-color: #053159;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  margin-top: 5px;
+}
+.nav-link.active:focus, .nav-link.active:hover {
+  color: var(--bs-nav-link-hover-color);
+  background-color: #517ba2;
+  border-radius: 4px;
+}
+
+.me-2 {
+  padding-left: 8px;
+}
+
+.navbar,
+.navbar-expand-lg,
+.navbar-dark,
+.bg-dark {
+  background-color: #191919 !important;
+}
+
+.navbar > .container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.navbar-toggler {
+  float: none;
+  margin-right: 0px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+  overflow-y: scroll;
+}
+
+a {
+  color: #165690;
+}
+a:hover, a:focus {
+  color: #df8a13;
+  text-decoration: none;
+}
+
+.header-logo {
+  text-align: center;
+  padding: 100px 0;
+  background-image: url(../img/header-bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.header-logo__title {
+  display: block;
+  font-family: "PT Serif", serif;
+  color: #df8a13;
+  letter-spacing: 0.33em;
+  margin-right: -0.33em;
+}
+.header-logo__description {
+  display: block;
+  font-size: 1.15rem;
+  letter-spacing: 0.2em;
+  font-family: "PT Sans", sans-serif;
+  color: #ffffff;
+}
+@media (min-width: 576px) {
+  .header-logo__title {
+    font-size: 3.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-item {
+    margin: 5px 5px 5px 0;
+  }
+  .nav-link {
+    border-radius: 4px;
+  }
+  .nav-link.active {
+    margin: 0;
+    border-radius: 4px;
+  }
+  .me-2 {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.8px) {
+  .mb-2 {
+    margin-bottom: 0 !important;
+  }
+  .me-2 {
+    margin-top: 0;
+  }
+}
+@media (max-width: 575.8px) {
+  .header-logo__title {
+    font-size: 2.5rem;
+  }
+}

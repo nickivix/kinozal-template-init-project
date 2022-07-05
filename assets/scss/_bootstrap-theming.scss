@@ -1,0 +1,75 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+.navbar {
+  min-height: 50px;
+  padding: 0;
+  --bs-navbar-nav-link-padding-x: 15px;
+}
+.nav-item {
+  @include sm-min {
+    margin: 5px 5px 5px 0;
+  }
+  font-family: $font-main;
+  text-align: center;
+}
+.nav-link {
+  @include sm-min {
+    border-radius: 4px;
+  }
+  transition: 0.5s;
+  padding: 15px;
+  &:focus,
+  &:hover {
+    color: var(--bs-nav-link-hover-color);
+    background-color: $color-primary;
+    border-radius: 4px;
+  }
+  &.active {
+    color: var(--bs-nav-link-hover-color);
+    background-color: $color-primary-dark;
+    transition: 0.5s;
+    @include sm-min {
+      margin: 0;
+      border-radius: 4px;
+    }
+    margin-top: 5px;
+    &:focus,
+    &:hover {
+      color: var(--bs-nav-link-hover-color);
+      background-color: $color-primary-light;
+      border-radius: 4px;
+    }
+  }
+}
+.mb-2 {
+  @include sm {
+    margin-bottom: 0 !important;
+  }
+}
+.me-2 {
+  @include sm-min {
+    margin-left: 5px;
+    margin-right: 0;
+  }
+  @include sm {
+    margin-top: 0;
+  }
+  padding-left: 8px;
+}
+.navbar,
+.navbar-expand-lg,
+.navbar-dark,
+.bg-dark {
+  background-color: $color-deep-dark !important;
+}
+.container.navbar-toggler {
+  //   justify-content: center;
+}
+.navbar > .container {
+  justify-content: center;
+}
+.navbar-toggler {
+  float: none;
+  margin-right: 0px;
+}

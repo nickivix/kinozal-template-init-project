@@ -1,0 +1,19 @@
+@use "presets" as *;
+@use "mixins" as *;
+
+html {
+  font-size: 16px;
+}
+body {
+  font-size: $font-size;
+  font-family: $font-main;
+  overflow-y: scroll;
+}
+a {
+  color: $color-primary;
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    text-decoration: none;
+  }
+}
