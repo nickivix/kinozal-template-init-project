@@ -73,3 +73,30 @@
   float: none;
   margin-right: 0px;
 }
+
+.card {
+  &:not(:last-of-type) {
+    margin-bottom: $gap * 2;
+  }
+  &:last-of-type {
+    margin: 0;
+  }
+  border: none;
+
+  .card-header {
+    border: none;
+    border-radius: 0 !important;
+    font-size: 1.25rem;
+    letter-spacing: 0.08em;
+    background-color: $color-accent;
+    color: $color-white;
+  }
+}
+.list-group {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid $color-gray !important;
+
+  .list-group-item {
+    background-color: $color-gray-light;
+  }
+}
