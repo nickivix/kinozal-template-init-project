@@ -1,6 +1,150 @@
 @use "presets" as *;
 @use "mixins" as *;
 
+$image-size: 85px;
+$image-size-with-padding: $image-size + $gap-md;
+
+.aside,
 .left-sidebar {
   margin-bottom: $gap-xl;
+  display: inline-block !important;
+
+  &__item {
+  }
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__image {
+    width: 100%;
+  }
+}
+.user-login {
+  position: relative;
+
+  &__tabs {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+  }
+  i {
+    border: none !important;
+    color: $color-gray !important;
+    padding: 0 !important;
+    font-size: 1.5rem !important;
+  }
+  .active i {
+    color: $color-white !important;
+  }
+  &-item {
+    margin: 0 !important;
+  }
+  &__link {
+    background-color: transparent !important;
+    padding: 0 !important;
+    margin: 5px 2px !important;
+  }
+}
+
+.site-news-item {
+  clear: both;
+  position: relative;
+
+  &:not(:last-of-type) {
+    min-height: $image-size-with-padding;
+    margin-bottom: $gap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: calc(100% - 100px);
+      height: 1px;
+      background-color: $color-gray;
+      right: 0;
+      bottom: -4px;
+    }
+  }
+
+  &:hover {
+    a {
+      color: $color-accent;
+    }
+    .img-thumbnail {
+      background-color: $color-accent;
+      border-color: $color-accent;
+    }
+  }
+
+  &__thumbnail {
+    float: left;
+    width: $image-size;
+    margin: 0 $gap-md $gap-md 0;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 0.5em;
+  }
+
+  &__link {
+    transition: color 0.25s;
+    @include block-shortener(1rem, 1.5, 50px, 2);
+  }
+
+  &__date {
+    text-align: right;
+    font-size: 0.8rem;
+    color: $color-gray-dark;
+  }
+}
+.top-films {
+  &__body {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &__list {
+    border: none !important;
+    margin-bottom: 0;
+  }
+
+  &__item {
+    background-color: transparent;
+    margin-left: -1px;
+    margin-right: 2px;
+    // border: none;
+    border-right: none;
+    color: $color-primary !important;
+
+    &:first-child {
+      border-top: none;
+      border-radius: 0;
+    }
+    &:last-child {
+      border-bottom: none;
+      border-radius: 0;
+    }
+    &:hover,
+    &:focus {
+      color: $color-white !important;
+      background-color: $color-accent !important;
+    }
+    &:hover > .top-films__badge,
+    &:focus > .top-films__badge {
+      color: $color-white !important;
+      background-color: $color-black !important;
+    }
+  }
+
+  &__badge {
+    background-color: $color-gray-dark !important;
+  }
 }

@@ -75,13 +75,14 @@
 }
 
 .card {
+  border: none;
+
   &:not(:last-of-type) {
     margin-bottom: $gap * 2;
   }
   &:last-of-type {
     margin: 0;
   }
-  border: none;
 
   .card-header {
     border: none;
@@ -98,5 +99,21 @@
 
   .list-group-item {
     background-color: $color-gray-light;
+    position: static;
   }
+}
+.input-group {
+  margin: 0 !important;
+}
+.bi-search {
+  padding-bottom: 2px;
+}
+.input-group-lg > .form-control {
+  font-size: 0.875rem;
+}
+.btn {
+  background-color: $color-white;
+}
+.img-thumbnail {
+  transform: background-color 0.5s;
 }
